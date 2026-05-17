@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/style.css">
+<h1>Vyplnění ankety</h1>
+
+<form method="POST" action="/survey">
+
+<% survey.questions.forEach(q => { %>
+  <div>
+    <p><%= q.text %></p>
+
+    <% if (q.type === "closed") { %>
+      <% q.options.forEach(opt => { %>
+        <label>
+          <input type="radio" name="<%= q.id %>" value="<%= opt %>" required>
+          <%= opt %>
+        </label><br>
+      <% }) %>
+    <% } else { %>
+      <textarea name="<%= q.id %>" required></textarea>
+    <% } %>
+  </div>
+  <hr>
+<% }) %>
+
+<button type="submit">Odeslat</button>
+</form>

@@ -1,0 +1,26 @@
+[
+  {
+    "surveyId": "2",
+    "answers": {
+      "q1": "1–5",
+      "q2": "PC",
+      "q3": "Sám",
+      "q4": "Hry",
+      "q5": "gensihbsn",
+      "q6": "nic"
+    },
+    "timestamp": "2026-05-14T21:27:37.190Z"
+  },
+  {
+    "surveyId": "2",
+    "answers": {
+      "q1": "6–15",
+      "q2": "Mobil",
+      "q3": "Sám",
+      "q4": "Hry",
+      "q5": "fw",
+      "q6": "wffw"
+    },
+    "timestamp": "2026-05-17T16:47:57.601Z"
+  }
+]

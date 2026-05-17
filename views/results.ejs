@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/style.css">
+<h1>Výsledky</h1>
+<p>Celkem odpovědí: <%= total %></p>
+
+<% survey.questions.forEach(q => { %>
+  <h3><%= q.text %></h3>
+
+  <% if (q.type === "closed") { %>
+    <% Object.entries(stats[q.id].data).forEach(([key, val]) => { %>
+      <p><%= key %>: <%= val %></p>
+    <% }) %>
+  <% } else { %>
+    <ul>
+      <% (stats[q.id].data.list || []).forEach(a => { %>
+        <li><%= a %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+  <hr>
+<% }) %>
